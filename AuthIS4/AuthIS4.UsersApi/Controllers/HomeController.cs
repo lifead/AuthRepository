@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace AuthIS4.OrderApi.Controllers
+namespace AuthIS4.UsersApi.Controllers
 {
     public class HomeController : Controller
     {
