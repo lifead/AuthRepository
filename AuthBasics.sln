@@ -5,7 +5,9 @@ VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Authorization.Basics", "AuthBasics\Authorization.Basics\Authorization.Basics.csproj", "{B95BD200-8DF2-4047-BCF5-EE10B6E92497}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authorization.Roles", "AuthBasics\Authorization.Roles\Authorization.Roles.csproj", "{84213432-1599-41C3-A1B2-60FC8B4C7CE7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Authorization.Roles", "AuthBasics\Authorization.Roles\Authorization.Roles.csproj", "{84213432-1599-41C3-A1B2-60FC8B4C7CE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authorization.JwtBearer", "AuthBasics\Authorization.JwtBearer\Authorization.JwtBearer.csproj", "{A0FEB96A-A729-4C6C-8487-83441206FF49}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{84213432-1599-41C3-A1B2-60FC8B4C7CE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84213432-1599-41C3-A1B2-60FC8B4C7CE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{84213432-1599-41C3-A1B2-60FC8B4C7CE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0FEB96A-A729-4C6C-8487-83441206FF49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0FEB96A-A729-4C6C-8487-83441206FF49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0FEB96A-A729-4C6C-8487-83441206FF49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0FEB96A-A729-4C6C-8487-83441206FF49}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
