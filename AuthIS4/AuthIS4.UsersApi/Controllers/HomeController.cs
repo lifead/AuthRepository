@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using IdentityModel.Client;
+using Microsoft.AspNetCore.Mvc;
+using System.Net.Http.Headers;
 
 namespace AuthIS4.UsersApi.Controllers
 {
@@ -17,8 +19,26 @@ namespace AuthIS4.UsersApi.Controllers
 
         public async Task<IActionResult> GetOrderSecretAsync()
         {
+            var authClient = clientFactory.CreateClient();
+            var discoveryDocument = await authClient.GetDiscoveryDocumentAsync("https://localhost:10001");
+            var tokenResponse = await authClient.RequestClientCredentialsTokenAsync(new ClientCredentialsTokenRequest
+            {
+                Address = discoveryDocument.TokenEndpoint,
+                ClientId = "client_id",
+                ClientSecret = "client_secret",
+                Scope = "OrdersApi"
+            });
+
             var clientOrders = clientFactory.CreateClient();
-            var response_secret_test = await clientOrders.GetStringAsync("https://localhost:7001/Home/GetSecret");
+            clientOrders.SetBearerToken(tokenResponse.AccessToken);
+            var response = await clientOrders.GetAsync("https://localhost:7001/Home/GetSecret");
+
+            if (!response.IsSuccessStatusCode)
+            {
+                ViewBag.SecretMessage = response.StatusCode.ToString();
+                return View();
+            }
+            var response_secret_test = await response.Content.ReadAsStringAsync();
             ViewBag.SecretMessage = response_secret_test;
             return View();
         }

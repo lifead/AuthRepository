@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 
 namespace AuthIS4.OrdersApi.Controllers
 {
@@ -9,6 +10,7 @@ namespace AuthIS4.OrdersApi.Controllers
             return View();
         }
 
+        [Authorize]
         public string GetSecret()
         {
             return $"Secret string from {nameof(AuthIS4)}.{nameof(OrdersApi)}.{nameof(HomeController)}.{nameof(GetSecret)}";
