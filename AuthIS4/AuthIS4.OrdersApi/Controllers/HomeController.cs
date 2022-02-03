@@ -8,5 +8,10 @@ namespace AuthIS4.OrdersApi.Controllers
         {
             return View();
         }
+
+        public string GetSecret()
+        {
+            return $"Secret string from {nameof(AuthIS4)}.{nameof(OrdersApi)}.{nameof(HomeController)}.{nameof(GetSecret)}";
+        }
     }
 }

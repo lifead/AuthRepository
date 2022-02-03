@@ -1,11 +1,11 @@
 ﻿{
   "profiles": {
-    "AuthIS4.OrdersApi": {
+    "AuthIS4.IdentityServer4Service": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
       "launchUrl": "Home/Index",
-      "applicationUrl": "https://localhost:7001;http://localhost:7000",
+      "applicationUrl": "https://localhost:10001;http://localhost:10000",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
