@@ -1,0 +1,14 @@
+﻿{
+  "profiles": {
+    "AuthIS4.ClientMVC": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "launchUrl": "Home/Index",
+      "applicationUrl": "https://localhost:2001;http://localhost:2000",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

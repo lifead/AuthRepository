@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthIS4.UsersApi", "AuthIS4
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthIS4_Core3_1.IdentityServer4Service", "AuthIS4\AuthIS4_Core3_1.IdentityServer4Service\AuthIS4_Core3_1.IdentityServer4Service.csproj", "{1B401E7A-12D6-42B6-91DA-BF295A411A23}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthIS4.ClientMVC", "AuthIS4\AuthIS4.ClientMVC\AuthIS4.ClientMVC.csproj", "{B3CC81F1-AA13-4BCC-A6C6-363DFA5FDEC1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{1B401E7A-12D6-42B6-91DA-BF295A411A23}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B401E7A-12D6-42B6-91DA-BF295A411A23}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B401E7A-12D6-42B6-91DA-BF295A411A23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3CC81F1-AA13-4BCC-A6C6-363DFA5FDEC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3CC81F1-AA13-4BCC-A6C6-363DFA5FDEC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3CC81F1-AA13-4BCC-A6C6-363DFA5FDEC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3CC81F1-AA13-4BCC-A6C6-363DFA5FDEC1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
