@@ -1,6 +1,5 @@
 ﻿using IdentityModel.Client;
 using Microsoft.AspNetCore.Mvc;
-using System.Net.Http.Headers;
 
 namespace AuthIS4.UsersApi.Controllers
 {

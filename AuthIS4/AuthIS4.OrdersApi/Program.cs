@@ -1,8 +1,14 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
-using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
+
+
+builder.Services.AddCors(config =>
+    {
+        config.AddPolicy("DefaultPolicy",
+            options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+    });
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
@@ -24,6 +30,8 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+
+app.UseCors("DefaultPolicy");
 
 app.UseAuthentication();
 app.UseAuthorization();

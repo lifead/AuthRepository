@@ -1,11 +1,7 @@
+using AuthIS4_Core3_1.IdentityServer4Service.DataBase;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace AuthIS4_Core3_1.IdentityServer4Service
 {
@@ -13,7 +9,12 @@ namespace AuthIS4_Core3_1.IdentityServer4Service
     {
         public static void Main(string[] args)
         {
-            CreateHostBuilder(args).Build().Run();
+            var host = CreateHostBuilder(args).Build();
+            using (var scope = host.Services.CreateScope())
+            {
+                DataBaseInitializer.Init(scope.ServiceProvider);
+            }
+            host.Run();
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>

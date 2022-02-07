@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Authorization.Basics", "Aut
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Authorization.Roles", "AuthBasics\Authorization.Roles\Authorization.Roles.csproj", "{84213432-1599-41C3-A1B2-60FC8B4C7CE7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authorization.JwtBearer", "AuthBasics\Authorization.JwtBearer\Authorization.JwtBearer.csproj", "{A0FEB96A-A729-4C6C-8487-83441206FF49}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Authorization.JwtBearer", "AuthBasics\Authorization.JwtBearer\Authorization.JwtBearer.csproj", "{A0FEB96A-A729-4C6C-8487-83441206FF49}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthIS4.JsClient", "AuthIS4\AuthIS4.JsClient\AuthIS4.JsClient.csproj", "{B5399BAD-44BE-4BCB-9D9B-62913D76E8EB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{A0FEB96A-A729-4C6C-8487-83441206FF49}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0FEB96A-A729-4C6C-8487-83441206FF49}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0FEB96A-A729-4C6C-8487-83441206FF49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5399BAD-44BE-4BCB-9D9B-62913D76E8EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5399BAD-44BE-4BCB-9D9B-62913D76E8EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5399BAD-44BE-4BCB-9D9B-62913D76E8EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5399BAD-44BE-4BCB-9D9B-62913D76E8EB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

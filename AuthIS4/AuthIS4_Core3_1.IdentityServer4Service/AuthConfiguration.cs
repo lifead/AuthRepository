@@ -29,13 +29,30 @@ namespace AuthIS4_Core3_1.IdentityServer4Service
                     ClientId = "client_id_mvc",
                     ClientSecrets = { new Secret("client_secret_mvc".ToSha256()) },
                     AllowedGrantTypes = GrantTypes.Code,
-                    AllowedScopes = { 
+                    AllowedScopes = {
                         "OrdersApi",
                         "ClientMvc" ,
                         IdentityServerConstants.StandardScopes.OpenId,
                         IdentityServerConstants.StandardScopes.Profile
                     },
-                    RedirectUris = { "https://localhost:2001/signin-oidc"}
+                    RedirectUris = { "https://localhost:2001/signin-oidc"},
+                    RequireConsent = false
+                },
+                 new Client
+                {
+                    ClientId = "client_id_js",
+                    RequireClientSecret = false,
+                    AllowedGrantTypes = GrantTypes.Code,
+                    RequireConsent = false,
+                    RequirePkce = true,
+                    AllowedCorsOrigins = { "https://localhost:9001" },
+                    RedirectUris = { "https://localhost:9001/callback.html", "https://localhost:9001/refresh.html"},
+                    PostLogoutRedirectUris = new List<string> { "https://localhost:9001/index.html" },
+                    AllowedScopes = {
+                        "OrdersApi",
+                        IdentityServerConstants.StandardScopes.OpenId,
+                        IdentityServerConstants.StandardScopes.Profile
+                    },
                 }
             };
 
